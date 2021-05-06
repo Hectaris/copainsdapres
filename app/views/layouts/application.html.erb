@@ -18,10 +18,12 @@
   </head>
   <body>
     <%= render 'home/header' %>
-    <div class="container alert alert-primary" role="alert">
     <br>
-      <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p class="notice container alert alert-primary"><%= notice %></p>
+       <p class="alert" role="alert"><%= alert %></p>
+    <% end %>
+    <div class="container">
       <%= yield %>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
