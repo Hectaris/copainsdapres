@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+        <%= link_to 'Voir les posts de vos Copains', posts_path, class:"btn btn-primary"%>
+          <%= link_to "Ajouter de nouveaux centre d'interet", new_interest_path, class:"btn btn-secondary"%>
+          <%= link_to "Voir vos centres d'interets", interests_path, class:"btn btn-outline-secondary"%>
+
+    <% else %>
+    <H2>Bienvenue sur Copains d'après !</h2> 
+    <h6>Pour rencontrer de nouveaux copains, créez un compte ou Connectez vous !</H6>
+          <%= link_to 'Créer un compte', new_user_registration_path, class:"btn btn-primary"%>
+          <%= link_to 'Se connecter', new_user_session_path, class:"btn btn-outline-secondary"%>
+    <% end %>
